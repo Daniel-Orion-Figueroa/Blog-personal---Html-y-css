@@ -1,0 +1,189 @@
+:root {
+    --claro: #ffffff;
+    --oscuro: #000000;
+
+}
+
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+    background-color: var(--oscuro);
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 16px; /*1 rem = 10 px*/
+    font-family: "Edu SA Hand", cursive;
+    
+}
+
+/* tipografia */
+
+h1{
+    font-size: 2.5rem;
+}
+
+h2{
+    font-size: 2.3rem;
+    color: var(--claro);
+}
+
+h3{
+    font-size: 1.8rem;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+p {
+    font-size: 1.8rem;
+    color: var(--claro);
+}
+
+.w-sm-100{ /* sm = small */
+    width: 100%;
+}
+
+/* Titulo y Logo */
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: var(--claro);
+    font-size: 4rem;
+}
+
+.titulo {
+    font-size: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+    margin-right: 6rem;
+    padding-top: 3rem;
+}
+
+.tituloPq {
+    margin-top: 0rem;
+    margin-left: 6rem;
+    padding-top: 0rem;
+}
+
+@media (min-width: 660px) {
+    .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: var(--claro);
+        font-size: 4rem;
+        padding-top: 0;
+    }
+
+    .logo h1 {
+        margin: 1rem .6rem;
+    }
+
+    .tituloPq {
+        padding-top: 5rem;
+    }
+}
+
+
+/* Navegación principal y Header*/
+
+header {
+    background-image: url(../assets/img/vector-royal-blue-horizontal-stripes-background-ai-eps.jpg);
+    height: 38rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@media (min-width: 660px) {
+    header {
+    background-image: url(../assets/img/vector-royal-blue-horizontal-stripes-background-ai-eps.jpg);
+    height: 22rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+}
+.nav-principal {
+    margin-top: 3rem;
+    padding: 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+@media (min-width: 660px) {
+    .nav-background {
+    background-color: rgb(31, 81, 255);
+    }
+
+    
+}
+
+@media (min-width: 660px) {
+    .nav-principal {
+        background-color: rgb(31, 81, 255);
+        margin-bottom: 0rem;
+        margin: 5rem auto;
+        padding: 0.7rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.nav-principal a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--claro);
+    font-size: 2.3rem;
+    padding: 0rem 4rem;
+    
+}
+
+@media (min-width: 660px) {
+    .nav-principal a:hover{
+    color: var(--oscuro);
+    font-weight:1000;
+    font-size: 2.3rem;
+    padding: 0rem 7rem;
+    border-style: dashed;
+    border-color: var(--claro);
+    border-radius: 50%;
+    border-bottom: #000000;
+}
+}
+.nav-principal a:hover{
+    color: var(--oscuro);
+    font-weight:1000;
+    font-size: 2.3rem;
+    padding: 0rem 7rem;
+    border-style: dashed;
+    border-color: var(--claro);
+    border-radius: 50%;
+    border-bottom: #000000;
+}
+
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor img {
+    border-radius: 50%;
+}
