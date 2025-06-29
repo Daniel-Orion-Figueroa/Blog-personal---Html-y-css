@@ -16,13 +16,13 @@
 <body>
 
     <header>
-        <div class="logo contenedor">
+        <div class="logo contenedorNav">
             <h1 class="titulo">Daniel</h1>
             <h1 class="tituloPq">Figueroa</h1>
         </div>
 
         <div class="nav-background ">
-            <nav class="nav-principal contenedor">
+            <nav class="nav-principal contenedorNav">
                 <a href="#">Sobre mí</a>
                 <a href="#">Habilidades</a>
                 <a href="#">Proyectos</a>
@@ -31,17 +31,19 @@
         </div>
     </header>
 
-    <main>
+    <main class="contenedorMain sombras">
         <section class="contenido">
             <h2>Sobre mí</h2>
             <img class="imgUser" src="assets/img/tarjeta FenixShip.jpeg" alt="Imagen Personal">
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum voluptas consequatur molestiae modi pariatur? Ipsum dignissimos necessitatibus corrupti? Ipsam iste nobis aut officia adipisci commodi debitis. Necessitatibus id eveniet vero.</p>
         </section>
+
+        <section class="contenido">
             <h2>Habilidades</h2>
             <p>En constante aprendizaje. Actualmente aprendiendo los siguientes lenguajes y tecnologias:</p>
     
             <div>
-                <img src="assets/img/lenguajes-de-programacion-featured.png" alt="imagen lenguajes de programación">
+                <img class="imgs" src="assets/img/lenguajes-de-programacion-featured.png" alt="imagen lenguajes de programación">
                 <ul>
                     <li>Html y Css</li>
                     <li>JavaScript</li>
@@ -53,6 +55,7 @@
                     <li>Sin mencionar mis habilidades con el idioma inglés</li>
                 </ul>
             </div>
+        </section>
             
         <section class="contenido">
             <h2>Proyectos</h2>
@@ -66,27 +69,28 @@
         <section class="contenido">
             <h2>Contacto</h2>
     
-            <form action="">
+            <form class="formulario">
                 <fieldset>
                     <legend>Puedes contactarme por medio de este formulario!!!</legend>
-    
-                    <div>
+                <div class="contenedor-campos">
+                    <div class="campo">
                         <label>Nombre</label>
-                        <input type="text" placeholder="nombre">
+                        <input class="input-text" type="text" placeholder="nombre">
                     </div>
     
-                    <div>
+                    <div class="campo">
                         <label>Correo</label>
-                        <input type="email" placeholder="email">
+                        <input class="input-text" type="email" placeholder="email@example.com">
                     </div>
     
-                    <div>
+                    <div class="campo">
                         <label>Mensaje</label>
-                        <textarea></textarea>
+                        <textarea class="input-text"></textarea>
                     </div>
+                </div> <!-- contenedor - campos -->
     
-                    <div>
-                        <input type="submit" value="Enviar">
+                    <div class="moverDerecha">
+                        <input class="boton " type="submit" value="Enviar">
                     </div>
                 </fieldset>
             </form>

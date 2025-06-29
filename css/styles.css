@@ -1,5 +1,5 @@
 :root {
-    --claro: #d3d3d3;
+    --claro: #b4c5f5;
     --blanco: #ffffff;
     --oscuro: #000000;
     --azul: rgb(31, 81, 255);
@@ -11,6 +11,7 @@ html {
     box-sizing: border-box;
     scroll-snap-type: y mandatory;
     background-color: var(--claro);
+    scroll-behavior: smooth;
 }
 
 *, *:before, *:after{
@@ -19,8 +20,9 @@ html {
 
 body{
     font-size: 16px; /*1 rem = 10 px*/
-    font-family: "Edu SA Hand", cursive;
+    font-family: 'Roboto', sans-serif;
     background-image: linear-gradient(to top, var(--claro) 0%, var(--blanco) 100%);
+    margin: 0px;
 }
 
 /* tipografia */
@@ -31,7 +33,7 @@ h1{
 
 h2{
     font-size: 2.3rem;
-    color: var(--oscuro);
+    color: var(--azul);
 }
 
 h3{
@@ -39,6 +41,7 @@ h3{
 }
 
 h1, h2, h3{
+    font-family: "Edu SA Hand", cursive;
     text-align: center;
 }
 
@@ -51,8 +54,36 @@ p {
     width: 100%;
 }
 
+.imgs {
+    width: 40rem;
+}
+
 .imgUser {
     border-radius: 50%;
+    width: 40rem;
+}
+
+.boton {
+    border-style: none;
+    border-radius: 10%;
+    padding: 1rem 2rem;
+    margin-top: 3rem;
+    background-color: var(--azul);
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.boton:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 0.2s ease;
+}
+
+.moverDerecha {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
 
 /* Titulo y Logo */
@@ -140,7 +171,6 @@ header {
 @media (min-width: 660px) {
     .nav-principal {
         background-color: var(--azul);
-        margin-bottom: 0rem;
         margin: 5rem auto;
         padding: 1rem;
         display: flex;
@@ -169,6 +199,8 @@ header {
     border-color: var(--blanco);
     border-radius: 50%;
     border-bottom: #000000;
+    transition: all 0.3s ease;
+
 }
 }
 .nav-principal a:hover{
@@ -183,7 +215,7 @@ header {
 }
 
 
-.contenedor {
+.contenedorNav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -193,17 +225,96 @@ header {
     border-radius: 50%;
 }
 
+.contenedorMain {
+    width: 90rem;
+    margin: 3rem auto;
+}
+
 /* Contenido Principal */
 
 main {
-    margin: 10rem 20rem;
-    background-color: var(--blanco);
     display: block;
-    
+    align-items: center;
+    margin: 10rem 20rem;
 }
 
-section {
-    
+.sombras {
+    -webkit-box-shadow: 0px 15px 38px -3px rgba(148,148,148,0.55);
+    -moz-box-shadow: 0px 15px 38px -3px rgba(148,148,148,0.55);
+    box-shadow: 0px 15px 38px -3px rgba(148,148,148,0.55);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenido p {
+    line-height: 2;
+}
+
+/* Contacto */
+
+.formulario {
+    background-color: var(--claro);
+    width: min(60rem , 100%);
+    border-radius: 3%;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--azul);
+}
+
+@media (min-width: 660px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto 20rem;
+        padding: 1rem;
+        column-gap: 2rem;
+    }
+    .campo:nth-child(3),
+    .campo:nth-child(4){
+        grid-column: 1/3;
+    }
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--oscuro);
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.campo textarea {
+    height: 15rem;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding:1rem;
+    border-radius:1rem;
+    font-size: 1.8rem;
 }
 
 /* Footer */
